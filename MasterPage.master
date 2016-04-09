@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>基于.net的航空票务系统的设计与实现</title>
+   
+     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 870px;
+        }
+        .style2
+        {
+            font-family: BatangChe;
+            font-size: x-large;
+        }
+        .style3
+        {
+            font-family: "Arial Unicode MS";
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <TABLE height=100 cellSpacing=0 cellPadding=0 width=776 align=center 
+background=/top.png border=0>
+  
+  <TR>
+      <td class="style1">
+          <asp:Image ID="Image1" runat="server" Height="106px" 
+              ImageUrl="~/images/plane.jpg" Width="126px" />
+          <span class="style2">&nbsp;</span><span class="style3">Huddersfield Airways</span></td>
+    <TD align=center style="width: 775px">&nbsp;</TD>
+    </TR></TABLE>
+<TABLE height=32 cellSpacing=0 cellPadding=0 width=776 align=center 
+background=images/menubg.gif border=0>
+  <TBODY>
+  <TR>
+    <TD width=25>&nbsp;</TD>
+    <TD align="center">
+      <TABLE height=32 cellSpacing=0 cellPadding=0 
+      background=images/menubg.gif border=0>
+        <TBODY>
+        <TR>
+          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle><A class=menunow 
+            href="default.aspx" >Homepage</A> </TD>
+          <TD align=middle style="width: 13px"><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle><A class=menu 
+            href="Tlist.aspx" >Information</A> 
+          </TD>
+              <TD align=middle style="width: 13px"><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 59px;" align=middle><A class=menu 
+            href="SearchT.aspx">Search</A> 
+          </TD>
+          <TD align=middle style="width: 25px"><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 65px;" align=middle><A class=menu 
+            href="SearchT.aspx" >OrderNow</A> </TD>
+               <TD align=middle width=10><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 75px;" align=middle><A class=menu 
+            href="liuyanban.aspx"  >Recomandation</A> </TD>
+          <TD align=middle width=10><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 81px;" align=middle>
+          
+          <A class=menu 
+            href="MyOrder.aspx" >My Order</A> 
+          
+          </TD>
+          <TD align=middle style="width: 27px"><IMG height=32 
+            src="images/menudivid.gif" width=3></TD>
+          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle>
+            
+            <A class=menu 
+            href="login.aspx"  >Log in</A> 
+            </TD>
+          <TD align=middle width=10><IMG height=32 
+            src="images/menudivid.gif" width=3>
+            
+            <td>
+             <TD style="PADDING-TOP: 5px; width: 73px;" align=middle>
+            <A class=menu 
+            href="register.aspx"  >Register</A> 
+            
+            </TD>
+            <TD align=middle width=10><IMG height=32 
+            src="images/menudivid.gif" width=3>
+            
+            <td>
+            </TD>
+            </TR></TBODY></TABLE></TD>
+    <TD align=right width=11>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE height=14 cellSpacing=0 cellPadding=0 width=776 align=center 
+background=images/m2.gif border=0>
+  <TBODY>
+  <TR>
+    <TD width=136 style="height: 14px"><IMG height=14 src="images/m1.gif" width=10></TD>
+    <TD style="width: 629px; height: 14px"></TD>
+    <TD align=right style="width: 11px; height: 14px"><IMG height=14 src="images/m3.gif" 
+  width=11></TD></TR></TBODY></TABLE>
+        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
+            height="12" width="776">
+            <tr>
+                <td  bgcolor="#e6e6e6" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table align="center" border="0" cellpadding="8" cellspacing="0" width="776">
+                        <tr align="middle" bgcolor="#e6e6e6">
+                            <td height="1" align="center"> <br />  <a href="Admin/Login.aspx"  target=_blank >Administrator</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+</body>
+</html>
