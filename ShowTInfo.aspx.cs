@@ -47,7 +47,30 @@ public partial class ShowTInfo : System.Web.UI.Page
 
 
     }
-    
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        if (Session["Users"] == null)
+        {
+            Maticsoft.DBUtility.js.AlertAndRedirect("Sorry. You need to log in.", "login.aspx");
+        }
+        else
+        {
+            string TName = this.txtname.Text;
+            int TId = int.Parse(Request.Params["id"].ToString());
+            string UserName = Session["Users"].ToString();
+            string TNum = TextBox1.Text;
+
+            AirTicketWeb.Model.OrderInfo model = new AirTicketWeb.Model.OrderInfo();
+            model.TName = TName;
+            model.TId = TId;
+            model.UserName = UserName;
+            model.TNum = TNum;
+
+            AirTicketWeb.BLL.OrderInfo bll = new AirTicketWeb.BLL.OrderInfo();
+            bll.Add(model);
+            Maticsoft.DBUtility.js.AlertAndRedirect("Order successful!", "MyOrder.aspx");
+        }
+    }
     protected void txtname_TextChanged(object sender, EventArgs e)
     {
 
