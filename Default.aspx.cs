@@ -102,5 +102,8 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
+    protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
 
+    }
 }
