@@ -72,7 +72,7 @@
                                                                 <asp:LinkButton ID="lbtnLogout" runat="server" Font-Underline="False" ForeColor="Black"
                                                                     OnClick="lbtnLogout_Click" Width="96px">Log out</asp:LinkButton>
                                                                 <asp:HyperLink ID="hlinkEdit" runat="server" Font-Underline="False" ForeColor="Black"
-                                                                    NavigateUrl="ModifyMyInfo.aspx" Width="90px">更新信息</asp:HyperLink></td>
+                                                                    NavigateUrl="ModifyMyInfo.aspx" Width="90px">Update</asp:HyperLink></td>
                                                             <td style="height: 16px">
                                                             </td>
                                                         </tr>
