@@ -1,134 +1,112 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>基于.net的航空票务系统的设计与实现</title>
-   
-     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Administrator</title>
+    <link  rel="stylesheet" href="../CSS/style.css"/>
     <style type="text/css">
         .style1
         {
-            width: 870px;
+            font-size: large;
         }
         .style2
         {
-            font-family: BatangChe;
-            font-size: x-large;
+            font-family: "Arial Black";
         }
         .style3
         {
-            font-family: "Arial Unicode MS";
-            font-size: x-large;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+        .style4
+        {
+            height: 32px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <TABLE height=100 cellSpacing=0 cellPadding=0 width=776 align=center 
-background=/top.png border=0>
-  
-  <TR>
-      <td class="style1">
-          <asp:Image ID="Image1" runat="server" Height="106px" 
-              ImageUrl="~/images/plane.jpg" Width="126px" />
-          <span class="style2">&nbsp;</span><span class="style3">Huddersfield Airways</span></td>
-    <TD align=center style="width: 775px">&nbsp;</TD>
-    </TR></TABLE>
-<TABLE height=32 cellSpacing=0 cellPadding=0 width=776 align=center 
-background=images/menubg.gif border=0>
-  <TBODY>
-  <TR>
-    <TD width=25>&nbsp;</TD>
-    <TD align="center">
-      <TABLE height=32 cellSpacing=0 cellPadding=0 
-      background=images/menubg.gif border=0>
-        <TBODY>
-        <TR>
-          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle><A class=menunow 
-            href="default.aspx" >Homepage</A> </TD>
-          <TD align=middle style="width: 13px"><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle><A class=menu 
-            href="Tlist.aspx" >Information</A> 
-          </TD>
-              <TD align=middle style="width: 13px"><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 59px;" align=middle><A class=menu 
-            href="SearchT.aspx">Search</A> 
-          </TD>
-          <TD align=middle style="width: 25px"><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 65px;" align=middle><A class=menu 
-            href="SearchT.aspx" >OrderNow</A> </TD>
-               <TD align=middle width=10><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 75px;" align=middle><A class=menu 
-            href="liuyanban.aspx"  >Recomandation</A> </TD>
-          <TD align=middle width=10><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 81px;" align=middle>
+    <div align="center" style="background-color: lightgrey">
+    <table style="width:60%;height:100%; font: messagebox;"  >
+    <tr>
+    <td  colspan="7" style="background-color: #FFFFFF;" class="style4">
+        <asp:Image ID="Image1" runat="server" 
+            ImageUrl="~/Admin/login_files/AdminTop.jpg" Width="168px" Height="112px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="style1"><span class="style2">&nbsp;</span><span class="style3">Administrator 
+        Page</span><span class="style2"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+    </tr>
+    <tr>
+        <td align="left" colspan="7" style="height: 16px; background-color: #cccc66">
+        Hello: <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
+           <asp:LinkButton ID="LKBtcxt" runat="server" Width="100px" OnClick="LKBtcxt_Click">LogOut here</asp:LinkButton>
+            </td>
+    </tr>
+    <tr><td style="width: 170px; border-right: #3366ff 0.2mm solid; border-top: #3366ff 0.2mm solid; border-left: #3366ff 0.2mm solid; border-bottom: #3366ff 0.2mm solid; height: 420px;" valign="top" align="left">
+      
+            <asp:TreeView runat="server" ID="tv" Width="99%" Height="69%">
+        <Nodes>
+           
+            
+            <asp:TreeNode Text="Admin Management" Value="账号管理">
+            
+                <asp:TreeNode Text="Add Admin" Value="添加账号" NavigateUrl="AddAdmin.aspx"></asp:TreeNode>
+         
+            <asp:TreeNode Text="Manage Admin" Value="管理账号" NavigateUrl="AdminList.aspx"></asp:TreeNode>
+               
+            </asp:TreeNode>
           
-          <A class=menu 
-            href="MyOrder.aspx" >My Order</A> 
-          
-          </TD>
-          <TD align=middle style="width: 27px"><IMG height=32 
-            src="images/menudivid.gif" width=3></TD>
-          <TD style="PADDING-TOP: 5px; width: 63px;" align=middle>
+             <asp:TreeNode  Text="Ticket Management" Value="票务管理">
+                <asp:TreeNode NavigateUrl="AddTInfo.aspx" Text="Add Ticket" Value="添加票务"></asp:TreeNode>
+      <asp:TreeNode NavigateUrl="TInfoManger.aspx" Text="Manage Ticket" Value="管理票务"></asp:TreeNode>
+               
+            </asp:TreeNode>
             
-            <A class=menu 
-            href="login.aspx"  >Log in</A> 
-            </TD>
-          <TD align=middle width=10><IMG height=32 
-            src="images/menudivid.gif" width=3>
             
-            <td>
-             <TD style="PADDING-TOP: 5px; width: 73px;" align=middle>
-            <A class=menu 
-            href="register.aspx"  >Register</A> 
+         
             
-            </TD>
-            <TD align=middle width=10><IMG height=32 
-            src="images/menudivid.gif" width=3>
+              <asp:TreeNode  Text="Members Management" Value="会员管理">
+                <asp:TreeNode NavigateUrl="UserList.aspx" Text="Manage Menbers" Value="会员管理"></asp:TreeNode>
+   
             
-            <td>
-            </TD>
-            </TR></TBODY></TABLE></TD>
-    <TD align=right width=11>&nbsp;</TD></TR></TBODY></TABLE>
-<TABLE height=14 cellSpacing=0 cellPadding=0 width=776 align=center 
-background=images/m2.gif border=0>
-  <TBODY>
-  <TR>
-    <TD width=136 style="height: 14px"><IMG height=14 src="images/m1.gif" width=10></TD>
-    <TD style="width: 629px; height: 14px"></TD>
-    <TD align=right style="width: 11px; height: 14px"><IMG height=14 src="images/m3.gif" 
-  width=11></TD></TR></TBODY></TABLE>
-        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0"
-            height="12" width="776">
-            <tr>
-                <td  bgcolor="#e6e6e6" valign="top">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="8" cellspacing="0" width="776">
-                        <tr align="middle" bgcolor="#e6e6e6">
-                            <td height="1" align="center"> <br />  <a href="Admin/Login.aspx"  target=_blank >Administrator</a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-
-
+   
+     </asp:TreeNode>
+          <asp:TreeNode  Text="Order Management" Value="订单管理">
+                <asp:TreeNode NavigateUrl="OrderManger.aspx" Text="Manage Orders" Value="订单管理"></asp:TreeNode>
+   
+            
+   
+     </asp:TreeNode>
+      <asp:TreeNode Text="Type of route Management" Value="航线类别管理">
+      <asp:TreeNode NavigateUrl="AddTInfoType.aspx" Text="Add type of route" Value="添加航线类别"></asp:TreeNode>
+              <asp:TreeNode NavigateUrl="TInfoType.aspx" Text="Manage type of route" Value="航线类别管理"></asp:TreeNode>
+   
+               
+                       
+            </asp:TreeNode>
+            <asp:TreeNode Text="Recommandation Management" Value="留言管理">
+              <asp:TreeNode NavigateUrl="Liuyan.aspx" Text="Manage Recommadation" Value="留言管理"></asp:TreeNode>
+   
+               
+                       
+            </asp:TreeNode>
+        </Nodes>
+    </asp:TreeView>
+       
+    </td>
+    <td style="width: 846px; border-right: #3366ff 0.2mm solid; border-top: #3366ff 0.2mm solid; border-left: #3366ff 0.2mm solid; border-bottom: #3366ff 0.2mm solid; height: 420px;" valign="top"  align="left" colspan="6">
+    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" >
+        </asp:contentplaceholder></td>
+        </tr>
+     
+        <tr><td colspan="7" align="center"  style="color: #000066; height: 16px; background-color: #cccc66;">
+            </td></tr>
+         <tr><td colspan="7" align="center"  style="color: #000066; height: 15px;">
+             </td></tr></table>
+   
+    </div>
     </form>
 </body>
 </html>
