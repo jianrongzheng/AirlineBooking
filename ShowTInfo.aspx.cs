@@ -75,5 +75,8 @@ public partial class ShowTInfo : System.Web.UI.Page
     {
 
     }
+    protected void typeName_TextChanged(object sender, EventArgs e)
+    {
 
+    }
 }
